@@ -1,5 +1,5 @@
 <?php
-include('../db/registeruser.php');
+include('../db/loginuser.php');
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include('../db/registeruser.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../style/css/bootstrap.min.css">
-    <title>Register page</title>
+    <title>Login Page</title>
 </head>
 
 <body class="bg-dark">
@@ -22,7 +22,7 @@ include('../db/registeruser.php');
         <section>
 
             <div class="container card-box text-white align-items-center p-5 mt-5 rounded" style="max-width: 500px;">
-                <h1 class="text-center">Register</h1>
+                <h1 class="text-center">Login</h1>
                 <?php if ($errors): ?>
                     <div class="alert alert-danger">
                         <ul>
@@ -37,24 +37,16 @@ include('../db/registeruser.php');
 
                 <form method="post">
                     <div class="mb-3">
-                        <label for="name" class="form-label">name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="password_confirm" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </form>
-                <p class="mt-3">Already have an account? <a href="login.php">Login here</a></p>
+                <p class="mt-3">Don't have an account? <a href="register.php">Register here</a></p>
             </div>
 
 
